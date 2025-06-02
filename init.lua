@@ -1,7 +1,11 @@
 require("config.lazy")
+
+-- lazy update
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
 -- Default configurations
+
+vim.keymap.set("n", "<leader>y", '"+yy', {desc = "Tank line to system clipboard"})
 
 vim.cmd.colorscheme("catppuccin")
 
