@@ -4,8 +4,10 @@ require("config.lazy")
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
 -- Default configurations
-
-vim.keymap.set("n", "<leader>y", '"+yy', {desc = "Tank line to system clipboard"})
+-- automatically use system clipboard by default
+vim.opt.clipboard = "unnamedplus"
+vim.keymap.set("n", "<leader>y", '"+y', { desc = "Tank line to system clipboard" })
+vim.keymap.set("n", "<leader>y", '"+yy', { desc = "Tank line to system clipboard" })
 
 vim.cmd.colorscheme("catppuccin")
 
@@ -14,8 +16,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Set appearance of tabs to 4 spaces only visually
-vim.opt.tabstop = 4		-- appearance of tab character
-vim.opt.shiftwidth = 4	-- number of spaces in auto indent new line
+vim.opt.tabstop = 4    -- appearance of tab character
+vim.opt.shiftwidth = 4 -- number of spaces in auto indent new line
 
 -- Ruler lines
 vim.opt.colorcolumn = "81,101,121"
@@ -35,7 +37,7 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 -- open code actions
-vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
 -- disable startup message
 vim.opt.shortmess:append({ I = true })
