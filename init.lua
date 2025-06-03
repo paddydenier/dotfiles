@@ -1,14 +1,5 @@
 require("config.lazy")
-
--- lazy update
-vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
-
--- Default configurations
--- automatically use system clipboard by default
-vim.opt.clipboard = "unnamedplus"
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "Tank line to system clipboard" })
-vim.keymap.set("n", "<leader>y", '"+yy', { desc = "Tank line to system clipboard" })
-
+require("config.keymap")
 vim.cmd.colorscheme("catppuccin")
 
 -- Relative and current line number
@@ -24,20 +15,6 @@ vim.opt.colorcolumn = "81,101,121"
 
 -- Nowrap
 vim.opt.wrap = false
-
--- Oil keymaps (change to shorter keymaps)
-vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory in Oil" })
-vim.keymap.set("n", "<leader>vim", "<cmd>Oil ~/.config/nvim<CR>", { desc = "Open neovim config directory in oil" })
-vim.keymap.set("n", "<leader>code", "<cmd>Oil ~/code<CR>", { desc = "Open code project directory in oil" })
-
--- Telescope keymaps
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
--- open code actions
-vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
 -- disable startup message
 vim.opt.shortmess:append({ I = true })
