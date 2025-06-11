@@ -21,3 +21,7 @@ vim.api.nvim_set_keymap("n", "<leader>ft", ":Telescope colorscheme<CR>", { norem
 
 -- open code actions
 vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
+
+-- pause nvim workflow
+vim.keymap.set("n", "<leader>ww", ":w<CR><C-z>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })

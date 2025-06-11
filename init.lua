@@ -1,5 +1,5 @@
 require("config.lazy")
-require("config.keymap")
+require("config.keymaps")
 vim.cmd.colorscheme("catppuccin")
 
 -- Relative and current line number
