@@ -25,3 +25,6 @@ vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<C
 -- nvim pause workflow
 vim.keymap.set("n", "<leader>w", ":w<CR><C-z>", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
+
+-- basic buffer switching
+vim.keymap.set('n', '<leader><tab>', '<C-^>', { noremap = true, silent = true })
