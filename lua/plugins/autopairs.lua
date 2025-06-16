@@ -18,7 +18,7 @@ return {
 				:with_move(function(opts)
 					return opts.prev_char:match(".%]") ~= nil
 				end),
-			Rule("$ ", " $", "tex")
+			Rule("$", "$", "tex")
 		})
 	end,
 }
