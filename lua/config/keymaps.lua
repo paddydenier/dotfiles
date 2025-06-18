@@ -8,6 +8,7 @@ vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy 
 
 -- Oil keymaps (change to shorter keymaps)
 vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory in Oil" })
+vim.keymap.set("n", "<leader>o", "<cmd>Oil<CR>", { desc = "Open parent directory in Oil" })
 vim.keymap.set("n", "<leader>vim", "<cmd>Oil ~/.config/nvim<CR>", { desc = "Open neovim config directory in oil" })
 vim.keymap.set("n", "<leader>code", "<cmd>Oil ~/code<CR>", { desc = "Open code project directory in oil" })
 
