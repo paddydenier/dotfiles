@@ -28,4 +28,19 @@ vim.keymap.set("n", "<leader>a", ":w<CR><C-z>", { noremap = true, silent = true 
 -- vim.keymap.set("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
 
 -- basic buffer switching
-vim.keymap.set('n', '<leader><tab>', '<C-^>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader><tab>", "<C-^>", { noremap = true, silent = true })
+
+-- quick and dirty print to pdf command keymap
+vim.keymap.set("n", "<leader>pp", function()
+  local fname = vim.fn.expand("%:t:r")           -- base file name (without extension)
+  local pdf_path = fname .. ".pdf"               -- output PDF in PWD
+  local tmp_html = "/tmp/" .. fname .. ".html"   -- temp HTML file
+
+  vim.cmd("TOhtml")                              -- convert current buffer to HTML
+  vim.cmd("write! " .. tmp_html)                 -- save to temp HTML file
+  vim.cmd("silent !wkhtmltopdf " .. tmp_html .. " " .. pdf_path)  -- convert to PDF
+  vim.cmd("bwipeout!")                           -- close the temporary HTML buffer
+  vim.fn.delete(tmp_html)                        -- delete the temp HTML file
+  vim.cmd("silent !zathura " .. pdf_path .. " &")  -- open PDF with Zathura
+end, { desc = "Export buffer to PDF and open in Zathura" })
+
