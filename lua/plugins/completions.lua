@@ -38,6 +38,20 @@ return {
 				}, {
 					{ name = "buffer" },
 				}),
+				formatting = {
+					format = function(entry, vim_item)
+						-- remove tilde from display text
+						vim_item.abbr = vim_item.abbr:gsub("~", "")
+						-- completion source labels
+						vim_item.menu = ({
+							nvim_lsp = "[LSP]",
+							luasnip = "[Snip]",
+							buffer = "[Buf]",
+							path = "[Path]",
+						})[entry.source.name]
+						return vim_item
+					end,
+				},
 			})
 		end,
 	},
