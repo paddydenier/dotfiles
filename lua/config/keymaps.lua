@@ -24,7 +24,7 @@ vim.api.nvim_set_keymap("n", "<leader>ft", ":Telescope colorscheme<CR>", { norem
 vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
 -- nvim pause workflow
-vim.keymap.set("n", "<leader>a", ":w<CR><C-z>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>s", ":w<CR><C-z>", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<leader>wq", ":wq<CR>", { noremap = true, silent = true })
 
 -- basic buffer switching
