@@ -22,6 +22,7 @@ vim.api.nvim_set_keymap("n", "<leader>ft", ":Telescope colorscheme<CR>", { norem
 
 -- open code actions
 vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 
 -- nvim pause workflow
 vim.keymap.set("n", "<leader>s", ":w<CR><C-z>", { noremap = true, silent = true })
@@ -32,15 +33,14 @@ vim.keymap.set("n", "<leader><tab>", "<C-^>", { noremap = true, silent = true })
 
 -- quick and dirty print to pdf command keymap
 vim.keymap.set("n", "<leader>pp", function()
-  local fname = vim.fn.expand("%:t:r")           -- base file name (without extension)
-  local pdf_path = fname .. ".pdf"               -- output PDF in PWD
-  local tmp_html = "/tmp/" .. fname .. ".html"   -- temp HTML file
+	local fname = vim.fn.expand("%:t:r") -- base file name (without extension)
+	local pdf_path = fname .. ".pdf" -- output PDF in PWD
+	local tmp_html = "/tmp/" .. fname .. ".html" -- temp HTML file
 
-  vim.cmd("TOhtml")                              -- convert current buffer to HTML
-  vim.cmd("write! " .. tmp_html)                 -- save to temp HTML file
-  vim.cmd("silent !wkhtmltopdf " .. tmp_html .. " " .. pdf_path)  -- convert to PDF
-  vim.cmd("bwipeout!")                           -- close the temporary HTML buffer
-  vim.fn.delete(tmp_html)                        -- delete the temp HTML file
-  vim.cmd("silent !zathura " .. pdf_path .. " &")  -- open PDF with Zathura
+	vim.cmd("TOhtml") -- convert current buffer to HTML
+	vim.cmd("write! " .. tmp_html) -- save to temp HTML file
+	vim.cmd("silent !wkhtmltopdf " .. tmp_html .. " " .. pdf_path) -- convert to PDF
+	vim.cmd("bwipeout!") -- close the temporary HTML buffer
+	vim.fn.delete(tmp_html) -- delete the temp HTML file
+	vim.cmd("silent !zathura " .. pdf_path .. " &") -- open PDF with Zathura
 end, { desc = "Export buffer to PDF and open in Zathura" })
-
