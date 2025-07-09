@@ -19,6 +19,7 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.api.nvim_set_keymap("n", "<leader>ft", ":Telescope colorscheme<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>", { desc = "Insert Skeleton Template", noremap = true, silent = true })
 
 -- open code actions
 vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
