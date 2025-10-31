@@ -4,4 +4,6 @@ require("config.options")
 require("config.skeletons")
 vim.cmd.colorscheme("catppuccin")
 
-vim.lsp.enable('black')
+-- diagnostics
+vim.opt.signcolumn = "yes"
+vim.diagnostic.enable(true)
