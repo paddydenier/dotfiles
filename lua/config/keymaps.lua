@@ -45,3 +45,8 @@ vim.keymap.set("n", "<leader>pp", function()
 	vim.fn.delete(tmp_html) -- delete the temp HTML file
 	vim.cmd("silent !zathura " .. pdf_path .. " &") -- open PDF with Zathura
 end, { desc = "Export buffer to PDF and open in Zathura" })
+
+
+vim.keymap.set('n', '<leader>o', ':source<CR> :update<CR>')
+
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)

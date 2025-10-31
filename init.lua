@@ -3,3 +3,5 @@ require("config.keymaps")
 require("config.options")
 require("config.skeletons")
 vim.cmd.colorscheme("catppuccin")
+
+vim.lsp.enable('black')
