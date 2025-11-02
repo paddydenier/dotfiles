@@ -50,3 +50,7 @@ end, { desc = "Export buffer to PDF and open in Zathura" })
 vim.keymap.set('n', '<leader>o', ':source<CR> :update<CR>')
 
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
+
+vim.keymap.set('n', '<leader>q', ':q!<CR>')
+
+vim.keymap.set('n', '<leader>wq', ':wq<CR>')

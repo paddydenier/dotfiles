@@ -16,3 +16,8 @@ vim.opt.wrap = false
 vim.opt.shortmess:append({ I = true })
 
 vim.opt.swapfile = false
+
+
+-- diagnostic
+vim.opt.signcolumn = "yes"
+vim.diagnostic.enable(true)
