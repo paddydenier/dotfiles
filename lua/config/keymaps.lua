@@ -1,4 +1,3 @@
--- Default configurations
 -- automatically use system clipboard by default
 vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<leader>y", '"+y', { desc = "Tank line to system clipboard" })
@@ -17,7 +16,7 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find f
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
-vim.api.nvim_set_keymap("n", "<leader>ft", ":Telescope colorscheme<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ft", ":Telescope colorscheme<CR>")
 vim.keymap.set(
 	"n",
 	"<leader>fs",
@@ -28,9 +27,6 @@ vim.keymap.set(
 -- TODO: this is native now, read man page
 -- vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
-
--- basic buffer switching
--- vim.keymap.set("n", "<leader><tab>", "<C-^>", { noremap = true, silent = true })
 
 -- quick and dirty print to pdf command keymap
 vim.keymap.set("n", "<leader>pp", function()
