@@ -11,22 +11,14 @@ vim.keymap.set("n", "<leader>vim", "<cmd>Oil ~/.config/nvim<CR>", { desc = "Open
 vim.keymap.set("n", "<leader>code", "<cmd>Oil ~/code<CR>", { desc = "Open code project directory in oil" })
 
 -- Telescope keymaps
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
-vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<leader>fd", ":Telescope diagnostics<CR>")
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
+vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
+vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 vim.keymap.set("n", "<leader>ft", ":Telescope colorscheme<CR>")
-vim.keymap.set(
-	"n",
-	"<leader>fs",
-	"<cmd>NewFromTemplate<CR>",
-	{ desc = "Insert Skeleton Template", noremap = true, silent = true }
-)
+vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>")
 
--- TODO: this is native now, read man page
--- vim.api.nvim_set_keymap("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
--- vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show Line Diagnostics" })
 
 -- quick and dirty print to pdf command keymap
 vim.keymap.set("n", "<leader>pp", function()
