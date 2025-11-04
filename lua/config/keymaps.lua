@@ -42,6 +42,8 @@ vim.keymap.set("n", "<leader>wq", ":wq<CR>")
 vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
 vim.keymap.set("n", "<leader>s", ":w<CR><C-z>")
 
+-- code actions
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
 -- quickfix
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
