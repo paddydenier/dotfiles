@@ -35,6 +35,10 @@ vim.keymap.set("n", "<leader>pp", function()
 	vim.cmd("silent !zathura " .. pdf_path .. " &") -- open PDF with Zathura
 end, { desc = "Export buffer to PDF and open in Zathura" })
 
+-- git signs
+vim.keymap.set("n", "<leader>gh", ":Gitsigns preview_hunk<CR>")
+vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>")
+
 -- important keymaps
 vim.keymap.set("n", "<leader>o", ":source<CR> :update<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
