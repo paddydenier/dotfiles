@@ -18,6 +18,7 @@ vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 vim.keymap.set("n", "<leader>ft", ":Telescope colorscheme<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>")
+vim.keymap.set("n", "<leader>fj", ":Telescope jumplist<CR>")
 
 
 -- quick and dirty print to pdf command keymap

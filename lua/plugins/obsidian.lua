@@ -24,5 +24,7 @@ return {
 		checkbox = {
 			order = { " ", "x" },
 		},
+		notes_subdir = "notes",
+		new_notes_location = "notes_subdir",
 	},
 }
