@@ -21,5 +21,8 @@ return {
 		},
 
 		legacy_commands = false,
+		checkbox = {
+			order = { " ", "x" },
+		},
 	},
 }
