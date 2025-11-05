@@ -20,7 +20,6 @@ vim.keymap.set("n", "<leader>ft", ":Telescope colorscheme<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>")
 vim.keymap.set("n", "<leader>fj", ":Telescope jumplist<CR>")
 
-
 -- quick and dirty print to pdf command keymap
 vim.keymap.set("n", "<leader>pp", function()
 	local fname = vim.fn.expand("%:t:r") -- base file name (without extension)
