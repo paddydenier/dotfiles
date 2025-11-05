@@ -20,6 +20,9 @@ vim.keymap.set("n", "<leader>ft", ":Telescope colorscheme<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>")
 vim.keymap.set("n", "<leader>fj", ":Telescope jumplist<CR>")
 
+-- TODO find better keymap
+vim.keymap.set("n", "<leader>ls", ":Telescope spell_suggest<CR>")
+
 -- quick and dirty print to pdf command keymap
 vim.keymap.set("n", "<leader>pp", function()
 	local fname = vim.fn.expand("%:t:r") -- base file name (without extension)
@@ -53,3 +56,6 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
+
+-- obsidian
+vim.keymap.set("n", "<leader>on", ":Obsidian new_from_template<CR>")
