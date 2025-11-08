@@ -17,6 +17,8 @@ vim.opt.shortmess:append({ I = true })
 
 vim.opt.swapfile = false
 
+-- resolve windows clipboad issue
+vim.opt.clipboard = "unnamedplus"
 
 -- diagnostic
 vim.opt.signcolumn = "yes"
