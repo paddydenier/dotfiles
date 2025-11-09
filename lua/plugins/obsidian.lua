@@ -27,17 +27,19 @@ return {
 			date_format = "%Y-%m-%d",
 		},
 		note_id_func = function(title)
-			-- If you provide a title, use it as the filename
-			return title and title:gsub("%s+", " ") or tostring(os.time())
+			-- ISO 8601 style: YYYY-MM-DD_HH-MM-SS
+			return os.date("%Y-%m-%d_%H-%M-%S")
 		end,
-		frontmatter = {
-			enabled = true,
-			func = function(note)
-				return {
-					title = note.title,
-					created = os.date("%Y-%m-%d"),
-				}
-			end,
-		},
+
+		-- TODO: remove frontmatter created property
+		-- 	frontmatter = {
+		-- 		enabled = true,
+		-- 		func = function(note)
+		-- 			return {
+		-- 				title = note.title,
+		-- 				created = os.date("%Y-%m-%d"),
+		-- 			}
+		-- 		end,
+		-- 	},
 	},
 }
