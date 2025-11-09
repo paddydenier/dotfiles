@@ -41,5 +41,16 @@ return {
 		-- 			}
 		-- 		end,
 		-- 	},
+		frontmatter = {
+			enabled = true,
+			func = function(note)
+				return {
+					id = note.id, -- preserve the note ID
+					aliases = {note.title}, -- keep aliases
+					tags = {}, -- keep tags
+					-- omit 'created' completely
+				}
+			end,
+		},
 	},
 }
