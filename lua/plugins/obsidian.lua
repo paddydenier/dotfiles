@@ -27,8 +27,10 @@ return {
 			date_format = "%Y-%m-%d",
 		},
 		note_id_func = function(title)
-			-- ISO 8601 style: YYYY-MM-DD_HH-MM-SS
-			return os.date("%Y-%m-%d_%H-%M-%S")
+			-- sanitize the title for filename (remove spaces and special chars)
+			local sanitized_title = title:gsub("%s+", "_"):gsub("[^%w_-]", "")
+			-- ISO 8601 style: YYYY-MM-DD_title
+			return os.date("%Y-%m-%d") .. "_" .. sanitized_title
 		end,
 
 		-- TODO: remove frontmatter created property
@@ -45,8 +47,8 @@ return {
 			enabled = true,
 			func = function(note)
 				return {
-					id = note.id, -- preserve the note ID
-					aliases = {note.title}, -- keep aliases
+					id = os.date("%Y-%m-%d_%H-%M-%S"),
+					aliases = { note.title }, -- keep aliases
 					tags = {}, -- keep tags
 					-- omit 'created' completely
 				}
