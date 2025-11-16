@@ -58,4 +58,4 @@ vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 
 -- obsidian
-vim.keymap.set("n", "<leader>on", ":Obsidian new_from_template<CR>")
+vim.keymap.set("n", "<leader>on", ":Obsidian new<CR>")
