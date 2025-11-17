@@ -59,3 +59,15 @@ vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 
 -- obsidian
 vim.keymap.set("n", "<leader>on", ":Obsidian new<CR>")
+
+-- vimwiki remaps
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "vimwiki",
+	callback = function()
+		-- Swap diary navigation to match your mental model:
+		-- Ctrl-Up → go to NEXT day (future)
+		-- Ctrl-Down → go to PREV day (past)
+		vim.keymap.set("n", "<C-Up>", "<Plug>VimwikiDiaryNextDay", { silent = true, buffer = true })
+		vim.keymap.set("n", "<C-Down>", "<Plug>VimwikiDiaryPrevDay", { silent = true, buffer = true })
+	end,
+})
