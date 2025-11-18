@@ -69,5 +69,11 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("n", "<C-Down>", "<Plug>VimwikiDiaryPrevDay", { silent = true, buffer = true })
 	end,
 })
-vim.keymap.set("n", "<leader>wj", ":VimwikiMakeDiaryNote<CR>")
-vim.keymap.set("n", "<leader>wk", ":VimwikiMakeTomorrowDiaryNote<CR>")
+vim.keymap.set("n", "<leader>wj", ":VimwikiMakeYesterdayDiaryNote<CR>")
+vim.keymap.set("n", "<leader>wk", ":VimwikiMakeDiaryNote<CR>")
+vim.keymap.set("n", "<leader>wl", ":VimwikiMakeTomorrowDiaryNote<CR>")
+
+vim.keymap.set('n', '<leader>fw', function()
+    require('telescope.builtin').live_grep({ cwd = "~/wiki" })
+end, { desc = "Search in wiki folder" })
+
