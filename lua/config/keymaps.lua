@@ -69,4 +69,5 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("n", "<C-Down>", "<Plug>VimwikiDiaryPrevDay", { silent = true, buffer = true })
 	end,
 })
-vim.keymap.set("n", "<leader>wn", ":VimwikiMakeTomorrowDiaryNote<CR>")
+vim.keymap.set("n", "<leader>wj", ":VimwikiMakeDiaryNote<CR>")
+vim.keymap.set("n", "<leader>wk", ":VimwikiMakeTomorrowDiaryNote<CR>")
