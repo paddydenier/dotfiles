@@ -65,8 +65,8 @@ vim.keymap.set("n", "<leader>oo", ":Obsidian today<CR>")
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "vimwiki",
 	callback = function()
-		vim.keymap.set("n", "<C-Up>", "<Plug>VimwikiDiaryNextDay", { silent = true, buffer = true })
-		vim.keymap.set("n", "<C-Down>", "<Plug>VimwikiDiaryPrevDay", { silent = true, buffer = true })
+		vim.keymap.set("n", "<C-l>", "<Plug>VimwikiDiaryNextDay", { silent = true, buffer = true })
+		vim.keymap.set("n", "<C-j>", "<Plug>VimwikiDiaryPrevDay", { silent = true, buffer = true })
 	end,
 })
 vim.keymap.set("n", "<leader>wj", ":VimwikiMakeYesterdayDiaryNote<CR>")

@@ -5,7 +5,7 @@ return {
 			{
 				path = "~/wiki",
 				syntax = "markdown",
-				ext = "md",
+				ext = ".md",
 				auto_diary_index = 1,
 			},
 		}
