@@ -3,7 +3,7 @@ return {
 	init = function()
 		vim.g.vimwiki_list = {
 			{
-				path = "~/wiki",
+				path = "~/wiki/notes_plain/",
 				syntax = "markdown",
 				ext = ".md",
 				auto_diary_index = 1,

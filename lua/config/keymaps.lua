@@ -73,7 +73,8 @@ vim.keymap.set("n", "<leader>wj", ":VimwikiMakeYesterdayDiaryNote<CR>")
 vim.keymap.set("n", "<leader>wk", ":VimwikiMakeDiaryNote<CR>")
 vim.keymap.set("n", "<leader>wl", ":VimwikiMakeTomorrowDiaryNote<CR>")
 
-vim.keymap.set('n', '<leader>fw', function()
-    require('telescope.builtin').live_grep({ cwd = "~/wiki" })
+vim.keymap.set("n", "<leader>fw", function()
+	require("telescope.builtin").live_grep({ cwd = "~/wiki" })
 end, { desc = "Search in wiki folder" })
 
+vim.keymap.set("n", "<leader>wm", ":silent !make -C ~/wiki/<CR>")
