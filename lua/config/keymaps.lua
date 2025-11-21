@@ -74,7 +74,9 @@ vim.keymap.set("n", "<leader>wk", ":VimwikiMakeDiaryNote<CR>")
 vim.keymap.set("n", "<leader>wl", ":VimwikiMakeTomorrowDiaryNote<CR>")
 
 vim.keymap.set("n", "<leader>fw", function()
-	require("telescope.builtin").live_grep({ cwd = "~/wiki" })
+	require("telescope.builtin").live_grep({ cwd = "~/wiki/notes_plain/" })
 end, { desc = "Search in wiki folder" })
 
-vim.keymap.set("n", "<leader>wm", ":silent !make -C ~/wiki/<CR>")
+vim.keymap.set("n", "<leader>wm", function()
+  vim.fn.jobstart({"make", "-C", "~/wiki/"})
+end, {desc = "Run Make in wiki folder"})
