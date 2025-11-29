@@ -20,13 +20,13 @@ return {
 		new_notes_location = "notes_subdir",
 		notes = {
 			folder = "notes",
-			template = "notes_template.md",
+			template = "notes_template.md", -- TODO: make default template
 		},
 		templates = {
 			folder = "templates",
 			date_format = "%Y-%m-%d",
 		},
-		note_id_func = function(title)
+		note_id_func = function(title) -- TODO: is this really necessary?
 			-- sanitize the title for filename (remove spaces and special chars)
 			local sanitized_title = title:gsub("%s+", "_"):gsub("[^%w_-]", "")
 			-- ISO 8601 style: YYYY-MM-DD_title
