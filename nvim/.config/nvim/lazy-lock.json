@@ -14,7 +14,7 @@
   "none-ls.nvim": { "branch": "main", "commit": "1917c86818b5e058f53c2ea0ad38fc57534d62fc" },
   "nvim": { "branch": "main", "commit": "ce4a8e0d5267e67056f9f4dcf6cb1d0933c8ca00" },
   "nvim-autopairs": { "branch": "master", "commit": "7a2c97cccd60abc559344042fefb1d5a85b3e33b" },
-  "nvim-lspconfig": { "branch": "master", "commit": "07f4e93de92e8d4ea7ab99602e3a8c9ac0fb778a" },
+  "nvim-lspconfig": { "branch": "master", "commit": "effe4bf2e1afb881ea67291c648b68dd3dfc927a" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-web-devicons": { "branch": "master", "commit": "8dcb311b0c92d460fac00eac706abd43d94d68af" },
   "obsidian.nvim": { "branch": "main", "commit": "4065c233f618cdbfbf084d87e97317f8d019ef59" },
@@ -24,6 +24,7 @@
   "telescope-ui-select.nvim": { "branch": "master", "commit": "6e51d7da30bd139a6950adf2a47fda6df9fa06d2" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
   "vague.nvim": { "branch": "main", "commit": "dba28050887c2810b5ebf9e0143b4e919bd55757" },
-  "vim-moonfly-colors": { "branch": "master", "commit": "930f33f2e91225afb0491d259cf151ea9eca6ca3" },
+  "vim-moonfly-colors": { "branch": "master", "commit": "1ad5a8d40176a8749f0c77b8875225d9d299a438" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a" },
   "vimwiki": { "branch": "dev", "commit": "72792615e739d0eb54a9c8f7e0a46a6e2407c9e8" }
 }
