@@ -12,7 +12,11 @@ vim.keymap.set("n", "<leader>code", "<cmd>Oil ~/code<CR>", { desc = "Open code p
 
 -- Telescope keymaps
 vim.keymap.set("n", "<leader>fd", ":Telescope diagnostics<CR>")
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
+vim.keymap.set(
+	"n",
+	"<leader>ff",
+	":lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true, follow = true })<CR>"
+)
 vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
@@ -78,5 +82,5 @@ vim.keymap.set("n", "<leader>fw", function()
 end, { desc = "Search in wiki folder" })
 
 vim.keymap.set("n", "<leader>wm", function()
-  vim.fn.jobstart({"make", "-C", "~/wiki/"})
-end, {desc = "Run Make in wiki folder"})
+	vim.fn.jobstart({ "make", "-C", "~/wiki/" })
+end, { desc = "Run Make in wiki folder" })

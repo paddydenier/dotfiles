@@ -18,6 +18,17 @@ return {
 						i = { ["<C-d>"] = actions.delete_buffer },
 						n = { ["<C-d>"] = actions.delete_buffer },
 					},
+					vimgrep_arguments = {
+						"rg",
+						"--color=never",
+						"--no-heading",
+						"--with-filename",
+						"--line-number",
+						"--column",
+						"--smart-case",
+						"--hidden", -- include hidden files
+						"--no-ignore", -- override .gitignore / .ignore
+					},
 				}),
 				extensions = {
 					["ui-select"] = themes.get_dropdown({}),
