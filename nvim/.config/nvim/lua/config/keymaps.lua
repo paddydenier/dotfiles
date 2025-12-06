@@ -1,7 +1,3 @@
--- automatically use system clipboard by default
-vim.opt.clipboard = "unnamedplus"
-vim.keymap.set("n", "<leader>y", '"+y', { desc = "Tank line to system clipboard" })
-
 -- lazy update
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
