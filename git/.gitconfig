@@ -1,0 +1,29 @@
+[user]
+	email = 202327146+paddydenier@users.noreply.github.com
+	name = Paddy Denier
+	signingkey = A5D648072C6C2EF7042CE533944F2D1F18F3C11B
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[commit]
+	gpgsign = true
+[tag]
+	tpgsign = true
+[format]
+	signoff = true
+[core]
+	editor = nvim
+[alias]
+	s = status
+	c = commit
+	ca = commit --amend
+	fp = format-patch -1
+	a = add --patch
+	# p = push
+	pr = pull --rebase
+	ra = rebase --abort
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
