@@ -1,0 +1,11 @@
+title = "dotfiles gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+regexTarget = "match"
+description = "allow public GPG key ID"
+regexes = [
+  '''944F2D1F18F3C11B''',
+]
