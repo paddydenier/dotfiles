@@ -20,18 +20,18 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-
+export PATH=$PATH:~/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # key binds for scripts
-bind -x '"\C-f": ~/.config/bash/scripts/tmux-sessionizer.sh'
-bind -x '"\C-o": ~/.config/bash/scripts/open-github.sh'
-
+# none of this works because WSL doesnt source bashrc on startup
 export EDITOR=nvim
 export VISUAL=nvim
 
 set -o vi
+bind -x '"\C-f": tmux-sessionizer.sh'
+bind -x '"\C-o": open-github.sh'
 
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
