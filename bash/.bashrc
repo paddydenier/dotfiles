@@ -7,6 +7,7 @@ case $- in
       *) return;;
 esac
 
+
 export GPG_TTY=$(tty)
 
 export HISTTIMEFORMAT="%F %T "
@@ -20,12 +21,12 @@ HISTSIZE=1000
 HISTFILESIZE=2000
 
 
-export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-
-bind -x '"\C-f": tmux-sessionizer.sh'
+# key binds for scripts
+bind -x '"\C-f": ~/.config/bash/scripts/tmux-sessionizer.sh'
+bind -x '"\C-o": ~/.config/bash/scripts/open-github.sh'
 
 export EDITOR=nvim
 export VISUAL=nvim
