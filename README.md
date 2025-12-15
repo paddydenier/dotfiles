@@ -1,6 +1,6 @@
 # Dotfiles
 
-My minimal and modular GNU Stow–managed, gitleaks-secured dotfiles.
+My minimal and modular GNU [Stow](https://www.gnu.org/software/stow/)–managed, [gitleaks](https://github.com/gitleaks/gitleaks)-secured dotfiles.
 
 ## GNU Stow Packages
 
