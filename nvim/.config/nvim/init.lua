@@ -1,3 +1,4 @@
+vim.lsp.config('*', {}) -- initialize LSP to prevent NIL error
 require("config.lazy")
 require("config.keymaps")
 require("config.options")
