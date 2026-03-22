@@ -33,6 +33,8 @@ set -o vi
 bind -x '"\C-f": tmux-sessionizer.sh'
 bind -x '"\C-o": open-github.sh'
 
+bind '"\C-p": previous-history'
+
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 

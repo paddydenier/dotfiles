@@ -1,8 +1,10 @@
 alias v='nvim'
+alias vv='nvim .'
 alias g='git'
 alias t='tmux new -s "$(basename "$(pwd)")"'
 alias ll='ls -lah'
 
+alias f='fg'
 
 alias o='explorer.exe'
 alias oo='explorer.exe .'
