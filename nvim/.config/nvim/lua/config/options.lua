@@ -38,6 +38,3 @@ vim.opt.clipboard = "unnamedplus"
 -- diagnostic
 vim.opt.signcolumn = "yes"
 vim.diagnostic.enable(true)
-
--- obsidian
-vim.opt.conceallevel = 2

@@ -52,14 +52,10 @@ vim.keymap.set("n", "<leader>s", ":w<CR><C-z>")
 -- code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
--- quickfix
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 
--- obsidian
-vim.keymap.set("n", "<leader>on", ":Obsidian new<CR>")
-vim.keymap.set("n", "<leader>oo", ":Obsidian today<CR>")
 
 -- vimwiki remaps
 vim.api.nvim_create_autocmd("FileType", {
