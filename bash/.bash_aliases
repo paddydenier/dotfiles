@@ -4,6 +4,9 @@ alias t='tmux new -s "$(basename "$(pwd)")"'
 alias ll='ls -lah'
 
 
+alias o='explorer.exe'
+alias oo='explorer.exe .'
+
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
