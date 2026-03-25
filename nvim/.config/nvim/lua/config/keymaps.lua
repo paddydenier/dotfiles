@@ -52,9 +52,12 @@ vim.keymap.set("n", "<leader>s", ":w<CR><C-z>")
 -- code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
+-- edit-compile-run workflow
+vim.keymap.set("n", "<leader>co", ":copen<CR>")
+vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
-vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
+vim.keymap.set("n", "<leader>e", ":w | make<CR>") -- compile
 
 
 -- vimwiki remaps

@@ -13,6 +13,8 @@ vim.g.clipboard = {
 	cache_enabled = 0,
 }
 
+vim.opt.splitright = true
+
 -- Relative and current line number
 vim.opt.number = true
 vim.opt.relativenumber = true
