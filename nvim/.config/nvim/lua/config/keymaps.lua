@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>q", ":q!<CR>")
 vim.keymap.set("n", "<leader>wq", ":wq<CR>")
 vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
-vim.keymap.set("n", "<leader>s", ":w<CR><C-z>")
+vim.keymap.set("n", "<leader>s", ":update<CR><C-z>")
 
 -- code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
@@ -57,7 +57,7 @@ vim.keymap.set("n", "<leader>co", ":copen<CR>")
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
-vim.keymap.set("n", "<leader>e", ":w | make<CR>") -- compile
+vim.keymap.set("n", "<leader>e", ":update | make<CR>") -- compile
 
 
 -- vimwiki remaps
