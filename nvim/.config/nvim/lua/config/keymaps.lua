@@ -24,18 +24,18 @@ vim.keymap.set("n", "<leader>fn", ":Telescope live_grep cwd=~/personal/notes<CR>
 vim.keymap.set("n", "<leader>ls", ":Telescope spell_suggest<CR>")
 
 -- quick and dirty print to pdf command keymap
-vim.keymap.set("n", "<leader>pp", function()
-	local fname = vim.fn.expand("%:t:r") -- base file name (without extension)
-	local pdf_path = fname .. ".pdf" -- output PDF in PWD
-	local tmp_html = "/tmp/" .. fname .. ".html" -- temp HTML file
-
-	vim.cmd("TOhtml") -- convert current buffer to HTML
-	vim.cmd("write! " .. tmp_html) -- save to temp HTML file
-	vim.cmd("silent !wkhtmltopdf " .. tmp_html .. " " .. pdf_path) -- convert to PDF
-	vim.cmd("bwipeout!") -- close the temporary HTML buffer
-	vim.fn.delete(tmp_html) -- delete the temp HTML file
-	vim.cmd("silent !zathura " .. pdf_path .. " &") -- open PDF with Zathura
-end, { desc = "Export buffer to PDF and open in Zathura" })
+-- vim.keymap.set("n", "<leader>pp", function()
+-- 	local fname = vim.fn.expand("%:t:r") -- base file name (without extension)
+-- 	local pdf_path = fname .. ".pdf" -- output PDF in PWD
+-- 	local tmp_html = "/tmp/" .. fname .. ".html" -- temp HTML file
+-- 
+-- 	vim.cmd("TOhtml") -- convert current buffer to HTML
+-- 	vim.cmd("write! " .. tmp_html) -- save to temp HTML file
+-- 	vim.cmd("silent !wkhtmltopdf " .. tmp_html .. " " .. pdf_path) -- convert to PDF
+-- 	vim.cmd("bwipeout!") -- close the temporary HTML buffer
+-- 	vim.fn.delete(tmp_html) -- delete the temp HTML file
+-- 	vim.cmd("silent !zathura " .. pdf_path .. " &") -- open PDF with Zathura
+-- end, { desc = "Export buffer to PDF and open in Zathura" })
 
 -- git signs
 vim.keymap.set("n", "<leader>gh", ":Gitsigns preview_hunk<CR>")
@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>q", ":q!<CR>")
 vim.keymap.set("n", "<leader>wq", ":wq<CR>")
 vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
-vim.keymap.set("n", "<leader>s", ":update<CR><C-z>")
+vim.keymap.set("n", "<leader>p", ":update<CR><C-z>")
 
 -- code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
