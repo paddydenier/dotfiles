@@ -22,7 +22,7 @@
 	ca = commit --amend
 	fp = format-patch -1
 	a = add --patch
-	# p = push
+	p = push
 	pf = push --force-with-lease
 	pr = pull --rebase
 	ra = rebase --abort

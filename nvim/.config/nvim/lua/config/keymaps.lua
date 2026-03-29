@@ -57,8 +57,6 @@ vim.keymap.set("n", "<leader>co", ":copen<CR>")
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
-vim.keymap.set("n", "<leader>e", ":update | make<CR>") -- compile
-
 
 -- vimwiki remaps
 vim.api.nvim_create_autocmd("FileType", {

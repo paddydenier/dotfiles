@@ -40,3 +40,6 @@ vim.opt.clipboard = "unnamedplus"
 -- diagnostic
 vim.opt.signcolumn = "yes"
 vim.diagnostic.enable(true)
+
+-- enforce save before :make
+vim.o.autowrite = true
