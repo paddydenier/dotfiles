@@ -20,7 +20,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Set appearance of tabs to 4 spaces only visually
-vim.opt.tabstop = 4    -- appearance of tab character
+vim.opt.tabstop = 4 -- appearance of tab character
 vim.opt.shiftwidth = 4 -- number of spaces in auto indent new line
 
 -- Ruler lines
@@ -43,3 +43,11 @@ vim.diagnostic.enable(true)
 
 -- enforce save before :make
 vim.o.autowrite = true
+
+-- avoid jump list pollution from oil
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "oil",
+	callback = function()
+		vim.bo.bufhidden = "wipe"
+	end,
+})

@@ -55,7 +55,7 @@ return {
 		},
 		opts_extend = { "sources.default" },
 	},
-	{
-		"github/copilot.vim",
-	},
+	-- {
+	-- 	"github/copilot.vim",
+	-- },
 }
