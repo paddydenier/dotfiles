@@ -1,3 +1,4 @@
+-- TODO: add descriptions and clean up
 -- lazy update
 vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
@@ -13,13 +14,17 @@ vim.keymap.set(
 	"<leader>ff",
 	":lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true, follow = true })<CR>"
 )
-vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
+
+vim.keymap.set("n", "<leader>.", "<cmd>keepjumps Telescope jumplist<CR>")
+vim.keymap.set("n", "<leader>,", ":Telescope live_grep<CR>")
+
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
+vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>")
 vim.keymap.set("n", "<leader>ft", ":Telescope colorscheme theme=dropdown<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>")
-vim.keymap.set("n", "<leader>fj", ":Telescope jumplist<CR>")
-vim.keymap.set("n", "<leader>fn", ":Telescope live_grep cwd=~/personal/notes<CR>")
+
+vim.keymap.set("n", "<leader>fn", ":Telescope live_grep cwd=~/personal/notes<CR>") --?
 -- TODO find better keymap
 vim.keymap.set("n", "<leader>ls", ":Telescope spell_suggest<CR>")
 
@@ -28,7 +33,7 @@ vim.keymap.set("n", "<leader>ls", ":Telescope spell_suggest<CR>")
 -- 	local fname = vim.fn.expand("%:t:r") -- base file name (without extension)
 -- 	local pdf_path = fname .. ".pdf" -- output PDF in PWD
 -- 	local tmp_html = "/tmp/" .. fname .. ".html" -- temp HTML file
--- 
+--
 -- 	vim.cmd("TOhtml") -- convert current buffer to HTML
 -- 	vim.cmd("write! " .. tmp_html) -- save to temp HTML file
 -- 	vim.cmd("silent !wkhtmltopdf " .. tmp_html .. " " .. pdf_path) -- convert to PDF
@@ -47,7 +52,7 @@ vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>q", ":q!<CR>")
 vim.keymap.set("n", "<leader>wq", ":wq<CR>")
 vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
-vim.keymap.set("n", "<leader>p", ":update<CR><C-z>")
+vim.keymap.set("n", "<leader>p", ":wa<CR><C-z>")
 
 -- code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
@@ -57,6 +62,7 @@ vim.keymap.set("n", "<leader>co", ":copen<CR>")
 vim.keymap.set("n", "<leader>cc", ":ccl<CR>")
 vim.keymap.set("n", "<leader>cn", ":cnext<CR>")
 vim.keymap.set("n", "<leader>cp", ":cprev<CR>")
+vim.keymap.set("n", "<leader>t", ":TodoQuickFix<CR>")
 
 -- vimwiki remaps
 vim.api.nvim_create_autocmd("FileType", {
