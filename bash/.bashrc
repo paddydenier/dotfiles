@@ -142,3 +142,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 eval -- "$(/usr/local/bin/starship init bash --print-full-init)"
+
+# Created by `pipx` on 2026-03-30 09:21:22
+export PATH="$PATH:/home/paddy/.local/bin"
+
+. "$HOME/.local/bin/env"
