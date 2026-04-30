@@ -1,6 +1,6 @@
 -- TODO: add descriptions and clean up
 -- lazy update
-vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
+-- vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
 -- Oil keymaps (change to shorter keymaps)
 vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory in Oil" })
@@ -15,13 +15,15 @@ vim.keymap.set(
 	":lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true, follow = true })<CR>"
 )
 
+-- vim.keymap.set("n", "<leader>w", ":wa<CR>")
+
 vim.keymap.set("n", "<leader>.", "<cmd>keepjumps Telescope jumplist<CR>")
 vim.keymap.set("n", "<leader>,", ":Telescope live_grep<CR>")
 
 vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 vim.keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>")
-vim.keymap.set("n", "<leader>ft", ":Telescope colorscheme theme=dropdown<CR>")
+vim.keymap.set("n", "<leader>ft", "<cmd>Telescope colorscheme theme=dropdown enable_preview=true previewer=false<CR>")
 vim.keymap.set("n", "<leader>fs", "<cmd>NewFromTemplate<CR>")
 
 vim.keymap.set("n", "<leader>fn", ":Telescope live_grep cwd=~/personal/notes<CR>") --?
@@ -50,8 +52,8 @@ vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>")
 vim.keymap.set("n", "<leader>o", ":source<CR> :update<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
 vim.keymap.set("n", "<leader>q", ":q!<CR>")
-vim.keymap.set("n", "<leader>wq", ":wq<CR>")
-vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
+-- vim.keymap.set("n", "<leader>wq", ":wq<CR>")
+-- vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
 vim.keymap.set("n", "<leader>p", ":wa<CR><C-z>")
 
 -- code actions
@@ -72,14 +74,14 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("n", "<C-j>", "<Plug>VimwikiDiaryPrevDay", { silent = true, buffer = true })
 	end,
 })
-vim.keymap.set("n", "<leader>wj", ":VimwikiMakeYesterdayDiaryNote<CR>")
-vim.keymap.set("n", "<leader>wk", ":VimwikiMakeDiaryNote<CR>")
-vim.keymap.set("n", "<leader>wl", ":VimwikiMakeTomorrowDiaryNote<CR>")
+-- vim.keymap.set("n", "<leader>wj", ":VimwikiMakeYesterdayDiaryNote<CR>")
+-- vim.keymap.set("n", "<leader>wk", ":VimwikiMakeDiaryNote<CR>")
+-- vim.keymap.set("n", "<leader>wl", ":VimwikiMakeTomorrowDiaryNote<CR>")
 
 vim.keymap.set("n", "<leader>fw", function()
 	require("telescope.builtin").live_grep({ cwd = "~/wiki/notes_plain/" })
 end, { desc = "Search in wiki folder" })
 
-vim.keymap.set("n", "<leader>wm", function()
-	vim.fn.jobstart({ "make", "-C", "~/wiki/" })
-end, { desc = "Run Make in wiki folder" })
+-- vim.keymap.set("n", "<leader>wm", function()
+-- 	vim.fn.jobstart({ "make", "-C", "~/wiki/" })
+-- end, { desc = "Run Make in wiki folder" })
