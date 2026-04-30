@@ -19,7 +19,7 @@ return {
 					return opts.prev_char:match(".%]") ~= nil
 				end),
 			Rule("$", "  $", "tex"),
-			Rule("<", ">")
+			-- Rule("<", ">")
 		})
 	end,
 }
