@@ -2,6 +2,10 @@
 -- lazy update
 -- vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
+vim.keymap.set("n", "<leader>n", function()
+    require("neogen").generate()
+end, { desc = "Generate docstring" })
+
 -- Oil keymaps (change to shorter keymaps)
 vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory in Oil" })
 vim.keymap.set("n", "<leader>vim", "<cmd>Oil ~/.config/nvim<CR>", { desc = "Open neovim config directory in oil" })
