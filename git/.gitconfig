@@ -11,7 +11,7 @@
 [commit]
 	gpgsign = true
 [tag]
-	tpgsign = true
+	gpgsign = true
 [format]
 	signoff = true
 [core]
