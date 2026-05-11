@@ -26,5 +26,13 @@
 	pf = push --force-with-lease
 	pr = pull --rebase
 	ra = rebase --abort
+
+	# branches
+	sc = switch -c
+	bd = branch -d
+	rem = remote add origin
+
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[push]
+	autoSetupRemote = true
