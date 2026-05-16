@@ -38,6 +38,14 @@ bind '"\C-p": previous-history'
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
+port() {
+    lsof -i :"$1"
+}
+
+proc() {
+    ps aux | grep "$1" | grep -v grep
+}
+
 # Prepend cd to directory names automatically
 shopt -s autocd 2> /dev/null
 # Correct spelling errors during tab-completion
