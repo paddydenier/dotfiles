@@ -1,5 +1,9 @@
 -- automatically use system clipboard by default
 -- vim.opt.clipboard = "unnamedplus"
+
+-- cindent fix colon indentation trigger
+vim.opt.cinkeys:remove(":")
+
 vim.g.clipboard = {
 	name = "WslClipboard",
 	copy = {
