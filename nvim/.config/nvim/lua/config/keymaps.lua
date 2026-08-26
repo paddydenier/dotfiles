@@ -89,3 +89,10 @@ end, { desc = "Search in wiki folder" })
 -- vim.keymap.set("n", "<leader>wm", function()
 -- 	vim.fn.jobstart({ "make", "-C", "~/wiki/" })
 -- end, { desc = "Run Make in wiki folder" })
+
+-- move line up / down workflow
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
+-- move multiple lines up / down workflow
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
