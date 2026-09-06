@@ -2,6 +2,8 @@
 -- lazy update
 -- vim.keymap.set("n", "<leader>la", "<cmd>Lazy update<CR>", { desc = "Update lazy plugins" })
 
+-- local keymap = vim.keymap -> TODO: replace with namespace
+
 vim.keymap.set("n", "<leader>n", function()
     require("neogen").generate()
 end, { desc = "Generate docstring" })
@@ -96,3 +98,7 @@ vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
 -- move multiple lines up / down workflow
 vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
+
+-- centered jumps 
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
