@@ -4,6 +4,8 @@ return {
 		---@module 'oil'
 		---@type oil.SetupOpts
 		opts = {
+			-- prevent oil from taking over when nvim .
+			default_file_explorer = false,
 			-- show hidden files and directories
 			view_options = {
 				show_hidden = true,
