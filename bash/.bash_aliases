@@ -2,6 +2,7 @@ alias v='nvim'
 alias vv='nvim .'
 alias g='git'
 alias t='tmux new -s "$(basename "$(pwd)")"'
+alias h='herdr'
 alias ll='ls -lah'
 
 alias p='fg'
