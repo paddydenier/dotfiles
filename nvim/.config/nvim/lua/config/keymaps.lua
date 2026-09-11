@@ -21,7 +21,12 @@ vim.keymap.set(
 	":lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true, follow = true })<CR>"
 )
 
--- vim.keymap.set("n", "<leader>w", ":wa<CR>")
+-- NOTE: check vimwiki key bind, causing delay, remove plugin?
+vim.keymap.set("n", "<leader>w", ":wa<CR>", {
+    nowait = true,
+})
+vim.keymap.set("n", "<leader>q", ":qa!<CR>")
+
 
 vim.keymap.set("n", "<leader>.", "<cmd>keepjumps Telescope jumplist<CR>")
 vim.keymap.set("n", "<leader>,", ":Telescope live_grep<CR>")
@@ -57,7 +62,6 @@ vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>")
 -- important keymaps
 vim.keymap.set("n", "<leader>o", ":source<CR> :update<CR>")
 vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
-vim.keymap.set("n", "<leader>q", ":q!<CR>")
 -- vim.keymap.set("n", "<leader>wq", ":wq<CR>")
 -- vim.keymap.set("n", "<leader>wqa", ":wqa<CR>")
 vim.keymap.set("n", "<leader>p", ":wa<CR><C-z>")
